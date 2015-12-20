@@ -61,7 +61,7 @@ export let addDocument = (doc) => {
             title: doc.title,
             content: doc.content,
             suggest: {
-                input: doc.title.split(" "),
+                input: doc.title.split(' ').concat(doc.title),
                 output: doc.title,
                 payload: doc.metadata || {}
             }

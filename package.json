@@ -1,11 +1,11 @@
 {
-  "name": "`nobitagit-elastic",
+  "name": "nobitagitElastic",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "private": true,
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "",
     "clean": "rm -rf dist",
     "build:server": "browserify server.js -o dist/server.js",
     "dev:server": "watchify server/index.js -v --node -o dist/server.js",

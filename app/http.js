@@ -3,13 +3,22 @@ let headers = {
   'Content-Type': 'application/json'
 };
 
+let unwrap = res => res.json()
+
 let s = {};
 s.post = (url, payload) => {
 	return fetch(url, {
 		method: 'post',
 		headers,
 		body: JSON.stringify(payload)
-	}).then((res) => res.json());
-}
+	}).then(unwrap);
+};
+
+s.get = (url)  => {
+	return fetch(url, {
+		method: 'get',
+		headers
+	}).then(unwrap);
+};
 
 export default s;

@@ -49,6 +49,10 @@ function startWatcher(build) {
 		console.log('\x1b[32m [' + build._name + ']' + '\x1b[0m => ' + msg);
 	});
 
+	b.on('error', function (msg) {
+		console.log('\x1b[32m [ERROR] \x1b[0m');
+	});
+
 	function bundle() {
 	  b.bundle()
 	  	.pipe(fs.createWriteStream(build._opts.outfile))
