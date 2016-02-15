@@ -7,18 +7,18 @@ let unwrap = res => res.json()
 
 let s = {};
 s.post = (url, payload) => {
-	return fetch(url, {
-		method: 'post',
-		headers,
-		body: JSON.stringify(payload)
-	}).then(unwrap);
+  return fetch(url, {
+    method: 'post',
+    headers,
+    body: JSON.stringify(payload)
+  }).then(unwrap);
 };
 
 s.get = (url)  => {
-	return fetch(url, {
-		method: 'get',
-		headers
-	}).then(unwrap);
+  return fetch(url, {
+    method: 'get',
+    headers
+  }).then(unwrap);
 };
 
 export default s;

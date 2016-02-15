@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Elastic node</title>
-	<style type="text/css">
-		*{
-			box-sizing: border-box;
-		}
-		.search-box{
-			position: relative;
-			width: 100%;
-			max-width: 300px;
-		}
-		.search-box__field{
-			padding: 5px 10px;
-		  border-radius: 5px;
-		  box-shadow: none;
-		  border: 1px solid #ccc;
-		  font-size: 1.2em;
-		  background: none;
-		  position: relative;
-		  z-index: 10;
-		  width: 100%;
-		}
-		.well-wrap{
-			position: relative;
-		}
-		.suggestion-list{
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  padding: 10px;
-		  list-style: none;
-		  background: white;
-		  width: 100%;
-		  margin: 0;
-		  box-shadow: 1px 1px 2px #EFEFEF;
-		}
-		.highlight-line{
-			background: teal;
-		}
-	</style>
+  <title>Elastic node</title>
+  <style type="text/css">
+    *{
+      box-sizing: border-box;
+    }
+    .search-box{
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+    }
+    .search-box__field{
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: none;
+      border: 1px solid #ccc;
+      font-size: 1.2em;
+      background: none;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+    .well-wrap{
+      position: relative;
+    }
+    .suggestion-list{
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      list-style: none;
+      background: white;
+      width: 100%;
+      margin: 0;
+      box-shadow: 1px 1px 2px #EFEFEF;
+    }
+    .highlight-line{
+      background: teal;
+    }
+  </style>
 </head>
 <body>
 
 <h1>Search</h1>
 <div id="click-bait">
-	<div class="search-box">
-		<input id="searchTitle" class="search-box__field" type="text" placeholder="search"> <br>
-		<div class="well-wrap" id="well">
-		</div>
-	</div>
-	<hr>
-	<input id="bookTitle" type="text" placeholder="title"> <br>
-	<input id="bookContent" type="text" placeholder="content">
-	<button id="testPost" data-clickAction="addBook">post</button>
+  <div class="search-box">
+    <input id="searchTitle" class="search-box__field" type="text" placeholder="search"> <br>
+    <div class="well-wrap" id="well">
+    </div>
+  </div>
+  <hr>
+  <input id="bookTitle" type="text" placeholder="title"> <br>
+  <input id="bookContent" type="text" placeholder="content">
+  <button id="testPost" data-clickAction="addBook">post</button>
 
-	<hr>
+  <hr>
 
-	<button data-clickAction="createIndex">create index</button> <br>
-	<button data-clickAction="removeIndex">delete index</button>
+  <button data-clickAction="createIndex">create index</button> <br>
+  <button data-clickAction="removeIndex">delete index</button>
 </div>
 <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch"></script>
 <script src="app.js"></script>
