@@ -7,7 +7,10 @@
   "scripts": {
     "postinstall": "",
     "clean": "rm -rf dist",
-    "build:server": "browserify server.js -o dist/server.js",
+    "build:server": "browserify server/index.js -o dist/server.js",
+    "build:app": "browserify app/index.js -o dist/app.js",
+    "build:html": "cp app/index.html dist/index.html",
+    "build": "build:app; build:server; build:html",
     "dev:server": "watchify server/index.js -v --node -o dist/server.js",
     "dev:app": "watchify app/index.js -v --debug -o dist/app.js",
     "serve": "nodemon dist/server.js"

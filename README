@@ -1,5 +1,18 @@
 Elasticsearch + ES6 autocomplete demo
 
+How to start this project:
+- clone it
+- run `npm i`
+- run `npm run build`
+- start an ElasticSearch instance
+- open `dist/index.html`
+
+Once the page is open:
+- press the button to create an index
+- add 'title' and 'content', press 'post' (repeat a few times to grow the index)
+- type in the search field and see the autocomplete kick in
+
+
 start off with Elastic: http://okfnlabs.org/blog/2013/07/01/elasticsearch-query-tutorial.html#query-dsl-overview
 
 credits to: https://blog.raananweber.com/2015/11/24/simple-autocomplete-with-elasticsearch-and-node-js/
